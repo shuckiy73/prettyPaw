@@ -9,6 +9,7 @@ import { videoBackgroundInit } from './modules/videoBackground';
 import { menuControl } from './modules/menuControl';
 import { locationHover } from './modules/locationHover';
 import { initScrollTopButton } from './modules/scrollTopButton';
+import { pageControlInit } from './modules/pageControl';
 
 // use modules
 videoBackgroundInit();
@@ -17,6 +18,7 @@ locationHover();
 initScrollTopButton('arrow-top', {
   hover: false,
 });
+pageControlInit();
 
 slidersInit('.about__slider', {
   pagination: {
