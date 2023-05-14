@@ -1,4 +1,5 @@
 import { gsap } from 'gsap';
+import {debounce} from './helper';
 
 export const locationHover = () => {
   const locationList = document.querySelector('.location__list');
@@ -85,6 +86,12 @@ export const locationHover = () => {
       }
     });
 
-   
+    window.addEventListener('resize', debounce(e => {
+      if (mediaQueryLG.matches) {
+        content.style = '';
+        title.style = '';
+        description.style = '';
+      }
+    }, 100));
   }
 };
